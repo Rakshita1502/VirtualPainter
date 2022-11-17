@@ -124,10 +124,10 @@ def virtual_Painter():
                     u = result
                     if fingers[1] and fingers[4]:
                         eraserThickness = u
-                    # print(eraserThickness)
-                    cv2.putText(img, str("eraserThickness="), (0, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
-                    cv2.putText(img, str(int(eraserThickness)), (450, 700), cv2.FONT_HERSHEY_PLAIN, 3,
-                                (255, 0, 255), 3)
+                    # # print(eraserThickness)
+                    # cv2.putText(img, str("eraserThickness="), (0, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
+                    # cv2.putText(img, str(int(eraserThickness)), (450, 700), cv2.FONT_HERSHEY_PLAIN, 3,
+                    #             (255, 0, 255), 3)
                     cv2.line(img, (xp, yp), (x1, y1), drawColor, eraserThickness)
                     cv2.line(imgCanvas, (xp, yp), (x1, y1), drawColor, eraserThickness)
 
@@ -156,9 +156,9 @@ def virtual_Painter():
                         if u<=25:
                             cv2.line(imgCanvas, (xp, yp), (x1, y1), drawColor, brushThickness)
                             cv2.line(img, (xp, yp), (x1, y1), drawColor, brushThickness)
-                        cv2.putText(img, str(u), (600, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
-                        cv2.putText(img, str("brushThickness="), (0, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
-                        cv2.putText(img, str(int(brushThickness)), (450, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255),3)
+                        # cv2.putText(img, str(u), (600, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
+                        # cv2.putText(img, str("brushThickness="), (0, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
+                        # cv2.putText(img, str(int(brushThickness)), (450, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255),3)
 
 
                     # Rectangle
@@ -171,8 +171,8 @@ def virtual_Painter():
                             result = -1 * result
                         u = result
                         cv2.rectangle(img, (x0, y0), (x1, y1), drawColor)
-                        cv2.putText(img, "Length of Diagonal = ", (0, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
-                        cv2.putText(img, str(u), (530, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
+                        # cv2.putText(img, "Length of Diagonal = ", (0, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
+                        # cv2.putText(img, str(u), (530, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
                         if fingers[4]:
                             cv2.rectangle(imgCanvas, (x0, y0), (x1, y1), drawColor)
                             cv2.circle
@@ -189,8 +189,8 @@ def virtual_Painter():
                         if result < 0:
                             result = -1 * result
                         u = result
-                        cv2.putText(img, "Radius Of Circe = ", (0, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
-                        cv2.putText(img, str(u), (450, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
+                        # cv2.putText(img, "Radius Of Circe = ", (0, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
+                        # cv2.putText(img, str(u), (450, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
                         cv2.circle(img,(x0,y0),u,drawColor)
                         if fingers[4]:
                             cv2.circle(imgCanvas, (x0, y0), u, drawColor)
@@ -210,9 +210,9 @@ def virtual_Painter():
                         if b<0:
                             b=-1*b
                         cv2.ellipse(img, (x1, y1),(a,b), 0,0,360, 255, 0)
-                        cv2.putText(img, "Major AL, Minor AL = ", (0, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
-                        cv2.putText(img, str(a), (550, 700), cv2.FONT_HERSHEY_PLAIN, 3, (123, 20, 255), 3)
-                        cv2.putText(img, str(b), (700, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
+                        # cv2.putText(img, "Major AL, Minor AL = ", (0, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
+                        # cv2.putText(img, str(a), (550, 700), cv2.FONT_HERSHEY_PLAIN, 3, (123, 20, 255), 3)
+                        # cv2.putText(img, str(b), (700, 700), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
                         if fingers[4]:
                             cv2.ellipse(imgCanvas, (x1, y1), (a, b), 0, 0, 360, 255, 0)
 
